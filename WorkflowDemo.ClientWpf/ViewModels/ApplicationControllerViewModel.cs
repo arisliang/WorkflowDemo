@@ -21,6 +21,8 @@ namespace WorkflowDemo.ClientWpf.ViewModels
         {
             _Map = map;
 
+            this.DisplayName = "Main Window";
+
             InitializeMap();
             ActivateFirstScreen();
         }

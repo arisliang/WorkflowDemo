@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
+    <Grid Background="#05F974">
+        <TextBlock Name="Results" Height="250" VerticalAlignment="Top" Margin="10,10,10,10" />
+        <Button Name="Cancel" Content="Start Over" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                Margin="0,0,10,10" Padding="5,2,5,2" />
     </Grid>
 </UserControl>

@@ -12,8 +12,8 @@ namespace WorkflowDemo.ClientWpf.ViewModels
     public abstract class BaseViewModel : Screen
     {
         #region fields and properties
-        public WorkflowState State { get; set; }
-        public StateTransition NextTransition { get; set; }
+        public WorkflowState State { get; protected set; }
+        public StateTransition NextTransition { get; protected set; }
 
         #endregion
 
@@ -24,5 +24,17 @@ namespace WorkflowDemo.ClientWpf.ViewModels
         }
 
         #endregion
+
+        public virtual void Next()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Cancel()
+        {
+            this.NextTransition = Models.StateTransition.CANCEL;
+            this.State = new WorkflowState();
+            this.TryClose();
+        }
     }
 }
